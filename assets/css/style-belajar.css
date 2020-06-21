@@ -1,0 +1,107 @@
+html {
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+}
+.bg-belajar {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.tata-surya, .atmosfir {
+    background-position: center;
+}
+.tata-surya {
+    background-image: url('../img/tata-surya.jpg');
+}
+.atmosfir {
+    background-image: url('../img/atmosfir.jpg');
+}
+.tanah {
+    background-image: url('../img/tanah.jpg');
+}
+.gelap {
+    position: absolute;
+    top: 0;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.wrap-belajar {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+    margin-left: -15px;
+}
+.tombol {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    margin-top: 75px;
+    color: rgb(209, 209, 209);
+    font-family: Vanilla;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.belajar-ini {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 7px;
+    border: 8px black solid;
+    color: black;
+    animation: play 2s alternate-reverse infinite;
+    cursor: pointer;
+    z-index: 5;
+    transition:all 300ms ease-in-out;
+   -webkit-transition:all 300ms ease-in-out;
+   -moz-transition:all 300ms ease-in-out;
+   -o-transition:all 300ms ease-in-out;
+   -ms-transition:all 300ms ease-in-out;
+}
+.belajar-ini:hover {
+    color: rgb(102, 0, 71);
+    border-color: rgb(102, 0, 71);
+    transition:all 300ms ease-in-out;
+   -webkit-transition:all 300ms ease-in-out;
+   -moz-transition:all 300ms ease-in-out;
+   -o-transition:all 300ms ease-in-out;
+   -ms-transition:all 300ms ease-in-out;
+}
+
+@keyframes play {
+    0%{ background-color: rgba(255, 255, 255, 0.8);}
+    100%{ background-color: rgba(255, 255, 255, 0.5);}
+}
+
+.back-button {
+    position: absolute;
+    bottom: 10px;
+    left: 35px;
+    font-size: 65px;
+}
+.back-button a {
+    color: rgb(95, 0, 95);
+    transition:all 300ms ease-in-out;
+   -webkit-transition:all 300ms ease-in-out;
+   -moz-transition:all 300ms ease-in-out;
+   -o-transition:all 300ms ease-in-out;
+   -ms-transition:all 300ms ease-in-out;
+}
+.back-button a:hover {
+    color: rgb(163, 0, 136);
+    transition:all 300ms ease-in-out;
+   -webkit-transition:all 300ms ease-in-out;
+   -moz-transition:all 300ms ease-in-out;
+   -o-transition:all 300ms ease-in-out;
+   -ms-transition:all 300ms ease-in-out;
+}

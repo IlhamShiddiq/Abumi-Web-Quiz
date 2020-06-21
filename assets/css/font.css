@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Vanilla;
+    src: url('../font/Vanilla.ttf');
+}
+@font-face {
+    font-family: Andromeda;
+    src: url('../font/Andromeda-eR2n.ttf');
+}
+@font-face {
+    font-family: Beachday;
+    src: url('../font/beachday.otf');
+}
+@font-face {
+    font-family: Grinched;
+    src: url('../font/GrinchedRegular.otf');
+}
+@font-face {
+    font-family: SweetYellow;
+    src: url('../font/SwEeT\ yElLoW.ttf');
+}
