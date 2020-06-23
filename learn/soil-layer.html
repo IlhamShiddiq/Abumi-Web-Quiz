@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn | Lapisan Tanah</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!-- More CSS -->
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="soil">
+
+    <div class="soil-wrapper">
+        <img src="../assets/img/soil.png" width="600" class="soil-pic">
+        <div class="btn-wrapper text-center">
+            <button type="button" class="btn btn-danger btn-layer" name="btn-1" id="btn-11">1</button>
+            <button type="button" class="btn btn-danger btn-layer" name="btn-2" id="btn-2">2</button>
+            <button type="button" class="btn btn-danger btn-layer" name="btn-3" id="btn-3">3</button>
+            <button type="button" class="btn btn-danger btn-layer" name="btn-4" id="btn-4">4</button>
+        </div>
+        <div class="soil-info invisible" id="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-right mt-2">
+                        <a id="close-btn" style="color: rgb(83, 75, 75); cursor: pointer;"><i class="fas fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/popper.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/all.js"></script>
+    <script>
+        $("button[name='btn-1']").click(function(){
+            $('#info').removeClass('invisible');
+            $('#info').addClass('visible');
+        });
+        $("button[name='btn-2']").click(function(){
+            $('#info').removeClass('invisible');
+            $('#info').addClass('visible');
+        });
+        $("button[name='btn-3']").click(function(){
+            $('#info').removeClass('invisible');
+            $('#info').addClass('visible');
+        });
+        $("button[name='btn-4']").click(function(){
+            $('#info').removeClass('invisible');
+            $('#info').addClass('visible');
+        });
+        $("#close-btn").click(function(){
+            $('#info').addClass('invisible');
+            $('#info').removeClass('visible');
+        });
+    </script>
+    
+</body>
+</html>
