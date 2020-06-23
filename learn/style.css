@@ -111,6 +111,12 @@ body {
    -o-transition:all 300ms ease-in-out;
    -ms-transition:all 300ms ease-in-out;
 }
+.back-button-ss a {
+    color: #0096aa !important;
+}
+.back-button-ss a:hover {
+    color: #04355d !important;
+}
 
 /* Atmosfer  Page */
 body.atm-bg {
@@ -180,6 +186,12 @@ input.atm {
     left: 500px;
     animation: putar-full 20s infinite forwards linear reverse;
 }
+.back-button-atm a {
+    color: #0e072e !important;
+}
+.back-button-atm a:hover {
+    color: #1f0f64 !important;
+}
 
 @keyframes putar {
     0%{
@@ -245,6 +257,12 @@ body.soil {
 .visible {
     display: block;
     animation: vis 1s;
+}
+.back-button-soil a {
+    color: #3d1904 !important;
+}
+.back-button-soil a:hover {
+    color: #552407 !important;
 }
 
 @keyframes vis {
