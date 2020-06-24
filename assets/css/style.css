@@ -188,6 +188,16 @@ html {
     overflow: auto;
     height: 340px;
 }
+.data-dev {
+    margin-bottom: -15px;
+}
+.data-dev p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.contact-dev a {
+    width: 125px;
+}
 
 
 /* Animasi */
