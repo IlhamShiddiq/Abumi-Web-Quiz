@@ -22,16 +22,19 @@
     <div class="soil-wrapper">
         <img src="../assets/img/soil.png" width="600" class="soil-pic">
         <div class="btn-wrapper text-center">
-            <button type="button" class="btn btn-danger btn-layer" name="btn-1" id="btn-11">1</button>
-            <button type="button" class="btn btn-danger btn-layer" name="btn-2" id="btn-2">2</button>
-            <button type="button" class="btn btn-danger btn-layer" name="btn-3" id="btn-3">3</button>
-            <button type="button" class="btn btn-danger btn-layer" name="btn-4" id="btn-4">4</button>
+            <button type="button" class="btn btn-danger btn-layer" onclick="loadtop()" name="btn-1" id="btn-11">1</button>
+            <button type="button" class="btn btn-danger btn-layer" onclick="loadmid()" name="btn-2" id="btn-2">2</button>
+            <button type="button" class="btn btn-danger btn-layer" onclick="loadbot()" name="btn-3" id="btn-3">3</button>
+            <button type="button" class="btn btn-danger btn-layer" onclick="loadbatu()" name="btn-4" id="btn-4">4</button>
         </div>
         <div class="soil-info invisible" id="info">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-right mt-2">
                         <a id="close-btn" style="color: rgb(83, 75, 75); cursor: pointer;"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="col-12 p-4 text-justify" id="konten">
+
                     </div>
                 </div>
             </div>
@@ -67,6 +70,70 @@
             $('#info').addClass('invisible');
             $('#info').removeClass('visible');
         });
+    </script>
+    <script>
+        const showinfo = response => {
+            let str = response;
+            let strs = str.split("@");
+            document.getElementById('konten').innerHTML = `<h2>${strs[0]}</h2>
+            <p>${strs[1]}</p>`;
+        }
+
+        const loadtop = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "T_1",
+                },
+                url: '../process/loadsoil.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadmid = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "T_2",
+                },
+                url: '../process/loadsoil.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadbot = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "T_3",
+                },
+                url: '../process/loadsoil.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadbatu = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "T_4",
+                },
+                url: '../process/loadsoil.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
     </script>
     
 </body>

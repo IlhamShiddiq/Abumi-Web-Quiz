@@ -38,7 +38,7 @@
                                 <img src="../assets/img/sun.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadsun();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 <img src="../assets/img/mercury.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadmercury();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                                 <img src="../assets/img/venus.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadvenus();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 <img src="../assets/img/earth.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadearth();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                                 <img src="../assets/img/mars.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadmars();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                                 <img src="../assets/img/jupiter.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadjupiter();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                                 <img src="../assets/img/saturn.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadsaturn();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                                 <img src="../assets/img/uranus.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loaduranus();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                                 <img src="../assets/img/neptune.png" width="600">
                             </div>
                             <div class="col-3">
-                                <div class="tombol-info"><i class="fas fa-info"></i></div>
+                                <div class="tombol-info" onclick="loadneptune();"><i class="fas fa-info"></i></div>
                             </div>
                         </div>
                     </div>
@@ -184,8 +184,8 @@
                 <div class="judul text-center text-white mt-3">
                     Info Planet
                 </div>
-                <div class="planet-pic mt-3"></div>
-                <div class="info mt-3"></div>
+                <div class="planet-pic mt-3 text-center p-2" id="pic-planet"></div>
+                <div class="info mt-3 text-white p-4 text-justify" id="inf-planet"></div>
             </div>
         </div>
     </div>
@@ -198,5 +198,6 @@
     <script src="../assets/js/popper.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/all.js"></script>
+    <script src="../assets/js/load-planet.js"></script>
 </body>
 </html>

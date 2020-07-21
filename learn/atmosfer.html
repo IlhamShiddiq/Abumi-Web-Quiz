@@ -21,13 +21,10 @@
     
     <div class="atm-info-wrap">
         <div class="atm-info">
-            <div class="nama-atm text-white text-center">
-                <p>Exosphere</p>
-            </div>
+            <div class="nama-atm text-white text-center" id="nm-atm"></div>
             <hr class="info">
-            <div class="info-atm text-white text-justify">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi minus magni, exercitationem nulla aliquid corrupti. Nam modi repellendus enim veritatis, consequuntur tenetur doloribus iure. Autem numquam adipisci nobis perferendis nesciunt.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi minus magni, exercitationem nulla aliquid corrupti. Nam modi repellendus enim veritatis, consequuntur tenetur doloribus iure. Autem numquam adipisci nobis perferendis nesciunt.</p>
+            <div class="info-atm text-white text-justify" id="inf-atm">
+                
             </div>
         </div>
     </div>
@@ -35,31 +32,31 @@
         <div class="input-group mb-2">
             <input type="text" class="form-control atm" readonly value="1)  Tropospherer" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;" onclick="loadtro();"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="input-group mb-2">
             <input type="text" class="form-control atm" readonly value="2)  Stratosphere" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;" onclick="loadstra();"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="input-group mb-2">
             <input type="text" class="form-control atm" readonly value="3)  Mesosphere" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;" onclick="loadmes();"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="input-group mb-2">
             <input type="text" class="form-control atm" readonly value="4)  Termosphere" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;" onclick="loadter();"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="input-group">
             <input type="text" class="form-control atm" readonly value="5)  Exosphere" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" style="color: white; width: 75px;" onclick="loadeks();"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </div>
@@ -78,6 +75,84 @@
     <script src="../assets/js/popper.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/all.js"></script>
+    <script>
+        const showinfo = response => {
+            let str = response;
+            let strs = str.split("@");
+            document.getElementById('nm-atm').innerHTML = `<p>${strs[0]}</p>`;
+            document.getElementById('inf-atm').innerHTML = `<p>${strs[1]}</p>`;
+        }
+
+        const loadtro = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "A_1",
+                },
+                url: '../process/loadatmosfer.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadstra = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "A_2",
+                },
+                url: '../process/loadatmosfer.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadmes = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "A_3",
+                },
+                url: '../process/loadatmosfer.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadter = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "A_4",
+                },
+                url: '../process/loadatmosfer.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+
+        const loadeks = () => {
+            $.ajax({
+                type: 'post',
+                data: {
+                    id: "A_5",
+                },
+                url: '../process/loadatmosfer.php',
+                
+                success: response => {
+                    showinfo(response);
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
