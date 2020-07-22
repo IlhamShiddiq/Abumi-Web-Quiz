@@ -22,7 +22,7 @@
     <div class="wrapper">
         <div class="box">
             <div class="box-header">
-                <p>Question 10/10</p>
+                <p>Question 8/10</p>
             </div>
             <div class="container">
                 <div class="row">
@@ -30,37 +30,37 @@
                         <button type="button" class="btn btn-primary image btn-dis" disabled data-toggle="modal" data-target="#image"><i class="far fa-image"></i></button>
                     </div>
                     <div class="col-12 pt-2">
-                        <p class="pertanyaan text-justify mb-4">Lapisan yang mengandung batuan yang mulai melapuk adalah lapisan..</p>
+                        <p class="pertanyaan text-justify mb-4">Hal berikut yang benar mengenai lapisan batuan induk adalah…</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>A.</span> Lapisan batuan induk</p>
-                        <p><span>B.</span> Lapisan tanah bawah</p>
+                        <p><span>A.</span> Merupakan lapisan terdalam tanah</p>
+                        <p><span>B.</span> Merupakan lapisan tanah ketiga</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>C.</span> Lapisan tanah tengah</p>
-                        <p><span>D.</span> Lapisan tanah atas</p>
+                        <p><span>C.</span> Merupakan lapisan tanah kedua</p>
+                        <p><span>D.</span> Merupakan lapisan terluar tanah</p>
                     </div>
                 </div>
             </div>
             <div class="answer text-center mt-2">
                 <small>Jawabanmu?</small><br>
-                <form action="a">
+                <form action="../process/opt-score.php" method="POST">
                     <div class="btn-group btn-group-toggle mt-1" data-toggle="buttons">
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option1" autocomplete="off"> A
+                          <input type="radio" name="options" id="option1" value="1" autocomplete="off"> A
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2" autocomplete="off"> B
+                          <input type="radio" name="options" id="option2" value="0" autocomplete="off"> B
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> C
+                          <input type="radio" name="options" id="option3" value="0" autocomplete="off"> C
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> D
+                          <input type="radio" name="options" id="option3" value="0" autocomplete="off"> D
                         </label>
                     </div>
                     <div class="form-group mt-2">
-                        <button type="submit" class="btn btn-primary btn-sm">Selanjutnya</button>
+                        <button type="submit" class="btn btn-primary btn-sm" name="q8">Selanjutnya</button>
                     </div>
                 </form>
             </div>
@@ -86,22 +86,24 @@
                 <div class="box-number text-center">
                     <p>7</p>
                 </div>
-                <div class="box-number text-center">
+                <div class="box-number text-center box-number-active">
                     <p>8</p>
                 </div>
                 <div class="box-number text-center">
                     <p>9</p>
                 </div>
-                <div class="box-number text-center box-number-active">
+                <div class="box-number text-center">
                     <p>10</p>
                 </div>
             </div>
-            <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
-                Anda <strong>belum memilih</strong> jawaban!
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <?php if(isset($_GET['null'])) : ?>
+                <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
+                    Anda <strong>belum memilih</strong> jawaban!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 

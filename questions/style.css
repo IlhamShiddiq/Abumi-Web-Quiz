@@ -101,3 +101,15 @@ p.pertanyaan {
     border-color: rgb(0, 0, 0) !important;
     cursor: auto;
 }
+.score {
+    font-size: 140px !important; 
+    font-weight: bold;
+    color: rgb(52, 39, 124);
+}
+.back button {
+    background-color: rgb(52, 39, 124);
+    border-color: rgb(52, 39, 124);
+}
+.sm {
+    color: rgb(52, 39, 124);
+}

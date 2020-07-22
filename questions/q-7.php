@@ -16,51 +16,51 @@
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 </head>
-<body class="solar-system">
+<body class="atmosfer">
     
 
     <div class="wrapper">
         <div class="box">
             <div class="box-header">
-                <p>Question 2/10</p>
+                <p>Question 7/10</p>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <button type="button" class="btn btn-primary image" data-toggle="modal" data-target="#image"><i class="far fa-image"></i></button>
+                        <button type="button" class="btn btn-primary image btn-dis" disabled data-toggle="modal" data-target="#image"><i class="far fa-image"></i></button>
                     </div>
                     <div class="col-12 pt-2">
-                        <p class="pertanyaan text-center mb-4">Planet apa yang biasa disebut dengan planet merah?</p>
+                        <p class="pertanyaan text-center mb-4">Hal yang benar mengenai Troposfer berikut adalah..</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>A.</span> Jupiter</p>
-                        <p><span>B.</span> Bumi</p>
+                        <p><span>A.</span> Merupakan lapisan pertama atmosder</p>
+                        <p><span>B.</span> Merupakan lapisan terluar atmosfer</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>C.</span> Mars</p>
-                        <p><span>D.</span> Saturnus</p>
+                        <p><span>C.</span> Pada lapisan ini UV menyebabkan ionisasi</p>
+                        <p><span>D.</span> Semua Salah</p>
                     </div>
                 </div>
             </div>
             <div class="answer text-center mt-2">
                 <small>Jawabanmu?</small><br>
-                <form action="a">
+                <form action="../process/opt-score.php" method="POST">
                     <div class="btn-group btn-group-toggle mt-1" data-toggle="buttons">
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option1" autocomplete="off"> A
+                          <input type="radio" name="options" id="option1" value="1" autocomplete="off"> A
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2" autocomplete="off"> B
+                          <input type="radio" name="options" id="option2" value="0" autocomplete="off"> B
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> C
+                          <input type="radio" name="options" id="option3" value="0" autocomplete="off"> C
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> D
+                          <input type="radio" name="options" id="option3" value="0" autocomplete="off"> D
                         </label>
                     </div>
                     <div class="form-group mt-2">
-                        <button type="submit" class="btn btn-primary btn-sm">Selanjutnya</button>
+                        <button type="submit" class="btn btn-primary btn-sm" name="q7">Selanjutnya</button>
                     </div>
                 </form>
             </div>
@@ -68,7 +68,7 @@
                 <div class="box-number text-center">
                     <p>1</p>
                 </div>
-                <div class="box-number text-center box-number-active">
+                <div class="box-number text-center">
                     <p>2</p>
                 </div>
                 <div class="box-number text-center">
@@ -83,7 +83,7 @@
                 <div class="box-number text-center">
                     <p>6</p>
                 </div>
-                <div class="box-number text-center">
+                <div class="box-number text-center box-number-active">
                     <p>7</p>
                 </div>
                 <div class="box-number text-center">
@@ -96,26 +96,28 @@
                     <p>10</p>
                 </div>
             </div>
-            <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
-                Anda <strong>belum memilih</strong> jawaban!
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <?php if(isset($_GET['null'])) : ?>
+                <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
+                    Anda <strong>belum memilih</strong> jawaban!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 
     <!-- Modal -->
     <div class="modal fade" id="image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-        <div class="modal-content modal-quest">
+        <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body text-center">
-            <img src="../assets/img/mars.png" width="350">
+            <img src="../assets/img/earth.png" width="350">
             </div>
             <div class="modal-footer">
             </div>

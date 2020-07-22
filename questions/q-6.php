@@ -22,7 +22,7 @@
     <div class="wrapper">
         <div class="box">
             <div class="box-header">
-                <p>Question 7/10</p>
+                <p>Question 6/10</p>
             </div>
             <div class="container">
                 <div class="row">
@@ -30,37 +30,37 @@
                         <button type="button" class="btn btn-primary image btn-dis" disabled data-toggle="modal" data-target="#image"><i class="far fa-image"></i></button>
                     </div>
                     <div class="col-12 pt-2">
-                        <p class="pertanyaan text-center mb-4">Hal yang benar mengenai Troposfer berikut adalah..</p>
+                        <p class="pertanyaan text-justify mb-4">Dalam lapisan ini radiasi ultraviolet (UV) menyebabkan ionisasi, terjadi pada lapisan..</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>A.</span> Merupakan lapisan pertama atmosder</p>
-                        <p><span>B.</span> Merupakan lapisan terluar atmosfer</p>
+                        <p><span>A.</span> Stratosfer</p>
+                        <p><span>B.</span> Eksosfer</p>
                     </div>
                     <div class="col-6 text-center option">
-                        <p><span>C.</span> Pada lapisan ini UV menyebabkan ionisasi</p>
-                        <p><span>D.</span> Semua Salah</p>
+                        <p><span>C.</span> Termosfer</p>
+                        <p><span>D.</span> Troposfer</p>
                     </div>
                 </div>
             </div>
             <div class="answer text-center mt-2">
                 <small>Jawabanmu?</small><br>
-                <form action="a">
+                <form action="../process/opt-score.php" method="POST">
                     <div class="btn-group btn-group-toggle mt-1" data-toggle="buttons">
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option1" autocomplete="off"> A
+                          <input type="radio" name="options" id="option1" value="0" autocomplete="off"> A
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2" autocomplete="off"> B
+                          <input type="radio" name="options" id="option2" value="0" autocomplete="off"> B
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> C
+                          <input type="radio" name="options" id="option3" value="1" autocomplete="off"> C
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3" autocomplete="off"> D
+                          <input type="radio" name="options" id="option3" value="0" autocomplete="off"> D
                         </label>
                     </div>
                     <div class="form-group mt-2">
-                        <button type="submit" class="btn btn-primary btn-sm">Selanjutnya</button>
+                        <button type="submit" class="btn btn-primary btn-sm" name="q6">Selanjutnya</button>
                     </div>
                 </form>
             </div>
@@ -80,10 +80,10 @@
                 <div class="box-number text-center">
                     <p>5</p>
                 </div>
-                <div class="box-number text-center">
+                <div class="box-number text-center box-number-active">
                     <p>6</p>
                 </div>
-                <div class="box-number text-center box-number-active">
+                <div class="box-number text-center">
                     <p>7</p>
                 </div>
                 <div class="box-number text-center">
@@ -96,12 +96,14 @@
                     <p>10</p>
                 </div>
             </div>
-            <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
-                Anda <strong>belum memilih</strong> jawaban!
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <?php if(isset($_GET['null'])) : ?>
+                <div class="alert alert-warning text-white text-center alert-dismissible fade show" role="alert">
+                    Anda <strong>belum memilih</strong> jawaban!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 
