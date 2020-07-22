@@ -3,10 +3,10 @@
     require "../connect.php";
 
     session_start();
-    $_SESSION['score'];
-    $_SESSION['nama'];
+
     
     if(isset($_POST['masuk'])) {
+        $_SESSION['score'] = 0;
         $_SESSION['nama'] = $_POST['nama'];
         header("Location: ../questions/q-1.php");
     }

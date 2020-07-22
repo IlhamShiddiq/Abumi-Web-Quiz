@@ -24,7 +24,7 @@
         <div class="wrap-tombol wrap-tombol-play">
           <div class="tombol tombol-home" data-toggle="modal" data-target="#siap" title="Ayo Belajar!"><i class="fas fa-book"></i></div>
           <div class="play tombol-home" data-toggle="modal" data-target="#modalIsiNama" title="Bermain Quiz"><i class="fas fa-play"></i></div>
-          <a href="score-board.html"><div class="tombol tombol-home" title="Laporan"><i class="fas fa-clipboard"></i></div></a>
+          <a href="score-board.php"><div class="tombol tombol-home" title="Laporan"><i class="fas fa-clipboard"></i></div></a>
         </div>
         <div class="wrap-tombol wrap-tombol-lain">
           <div class="row">
@@ -32,7 +32,7 @@
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#about-dev">Tentang Developer</button>
             </div>
             <div class="col-lg-6">
-              <button type="submit" class="btn btn-primary">Cara Bermain</button>
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#cara">Cara Bermain</button>
             </div>
           </div>
         </div>
@@ -90,6 +90,38 @@
       </div>
     </div>
     <!-- Modal Siap -->
+
+    <!-- Modal Cara Bermain -->
+    <div class="modal fade" id="cara" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title" id="exampleModalCenterTitle">Cara Bermain</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center pb-3" style="border-bottom: 1px white solid;">
+                  <img src="assets/img/how.jpg" width="100" style="border-radius: 100px;">
+                </div>
+                <div class="col-12 text-white pt-3 cara">
+                  1. Anda dapat menggunakan fitur "Ayo Belajar" untuk mempelajari materi pada Abumi ini.
+                </div>
+                <div class="col-12 text-white cara mt-1">
+                  2. Anda dapat mencoba untuk mengerjakan quiz soal yang berkaitan dengan materi Abumi.
+                </div>
+                <div class="col-12 text-white cara mt-1">
+                  3. Anda dapat melihat Top 10 score player tertinggi.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Modal Cara Bermain -->
 
     <!-- Modal About Developer -->
     <div class="modal fade" id="about-dev" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
