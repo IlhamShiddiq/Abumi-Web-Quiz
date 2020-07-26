@@ -9,6 +9,6 @@ Check this web quiz [here](http://abumi-quiz.000webhostapp.com/)
 ![home](https://i.imgur.com/AHW9OeP.png)
 ![quiz](https://i.imgur.com/BUxCE8f.png)
 ## Note
-this web quiz, can be accessed completely by mobile device
+This web quiz, can be accessed completely by desktop device only
 ### Source
 All vectors designed by [freepik](https://www.freepik.com/)
